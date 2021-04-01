@@ -152,7 +152,7 @@ const Body = () => {
                           Object.keys(products).map((index)=>{
                             const shoe = products[index]
                             return(
-                              <div className='col-6 col-md-4' key={index}>
+                              <div className='col-12 col-md-4' key={index}>
                               <Link to={`/product/${index}`} style={{textDecoration: 'none',color:'inherit'}}>
                                     <Card className='padding-custom mt-3 bg-texture'>
                                    
@@ -193,7 +193,7 @@ const Body = () => {
                           Object.keys(products).map((index)=>{
                             const shoe = products[index]
                             return(
-                              <div className='col-6 col-md-4' key={index}>
+                              <div className='col-12 col-md-4' key={index}>
                               <Link to={`/product/${index}`} style={{textDecoration: 'none',color:'inherit'}}>
                                     <Card className='padding-custom mt-3 bg-texture'>
                                    
@@ -234,7 +234,7 @@ const Body = () => {
                           Object.keys(products).map((index)=>{
                             const shoe = products[index]
                             return(
-                              <div className='col-6 col-md-4' key={index}>
+                              <div className='col-12 col-md-4' key={index}>
                               <Link to={`/product/${index}`} style={{textDecoration: 'none',color:'inherit'}}>
                                     <Card className='padding-custom mt-3 bg-texture'>
                                    
@@ -275,7 +275,7 @@ const Body = () => {
                           Object.keys(products).map((index)=>{
                             const shoe = products[index]
                             return(
-                              <div className='col-6 col-md-4' key={index}>
+                              <div className='col-12 col-md-4' key={index}>
                               <Link to={`/product/${index}`} style={{textDecoration: 'none',color:'inherit'}}>
                                     <Card className='padding-custom mt-3 bg-texture'>
                                    
@@ -316,7 +316,7 @@ const Body = () => {
                           Object.keys(products).map((index)=>{
                             const shoe = products[index]
                             return(
-                              <div className='col-6 col-md-4' key={index}>
+                              <div className='col-12 col-md-4' key={index}>
                               <Link to={`/product/${index}`} style={{textDecoration: 'none',color:'inherit'}}>
                                     <Card className='padding-custom mt-3 bg-texture'>
                                    
