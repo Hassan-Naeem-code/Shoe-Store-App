@@ -4,6 +4,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import {useDispatch} from 'react-redux';
+import {checkAvailability} from '../Store/action/auth';
 import '../custom.css';
 
 const useStyles = makeStyles({
@@ -15,13 +17,28 @@ const useStyles = makeStyles({
   });
 
 
-const Header = () => {
+const Header = (props) => {
   const classes = useStyles();
+  const dispatch = useDispatch();
     const [value, setValue] = React.useState(0);
   
     const handleChange = (event, newValue) => {
       setValue(newValue);
+      console.log(event,'jcjsdvcjhv');
     };
+    const getValue = (value) =>{
+      if(value == 'ALL'){
+        dispatch(checkAvailability(value));
+      }else if(value == 'STOCK'){
+        dispatch(checkAvailability(value))
+      }else if(value == 'UPCOMING'){
+        dispatch(checkAvailability(value))
+      }else if(value == 'NEW'){
+        dispatch(checkAvailability(value))
+      }else if(value == 'LATEST'){
+        dispatch(checkAvailability(value))
+      }
+    }
     return (
       <React.Fragment>
          <div className='container-fluid'>
@@ -34,7 +51,9 @@ const Header = () => {
                                      <img src={'https://1000logos.net/wp-content/uploads/2017/03/Nike-SB-logo.jpg'} className="img-responsive w-39" alt="main logo" />
                                  </div>
                                  <div className='col-md-6'>
-                                 <Paper className={classes.root}>
+                                 {
+                                   props.hide && props.hide == true ? null:(
+                                    <Paper className={classes.root}>
                                     <Tabs
                                         value={value}
                                         onChange={handleChange}
@@ -42,13 +61,16 @@ const Header = () => {
                                         textColor="primary"
                                         centered
                                     >
-                                        <Tab label="ALL" />
-                                        <Tab label="IN STOCK" />
-                                        <Tab label="UPCOMING" />
-                                        <Tab label="NEW" />
-                                        <Tab label="LATEST" />
+                                        <Tab label="ALL" onClick={()=>{getValue("ALL")}} />
+                                        <Tab label="IN STOCK" onClick={()=>{getValue("STOCK")}}  />
+                                        <Tab label="UPCOMING" onClick={()=>{getValue("UPCOMING")}}  />
+                                        <Tab label="NEW" onClick={()=>{getValue("NEW")}}  />
+                                        <Tab label="LATEST" onClick={()=>{getValue("LATEST")}}  />
                                     </Tabs>
                                  </Paper>
+                                   )
+                                 }
+                                 
                                  </div>
                                  <div className='col-md-3 text-right mt-3'>
                                   <img src={'https://png.pngitem.com/pimgs/s/244-2441597_nike-shoes-for-men-transparent-hd-png-download.png'} className="img-responsive w-40" alt="Header-logo-here" style={{height:'50px'}} />

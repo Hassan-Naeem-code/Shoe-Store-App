@@ -45,6 +45,15 @@ body{
 .font-16{
     font-size: 16px !important;
 }
+.font-17{
+    font-size: 17px !important;
+}
+.font-18{
+    font-size: 18px !important;
+}
+.font-19{
+    font-size: 19px !important;
+}
 .font-20{
     font-size: 20px;
 }
@@ -165,7 +174,7 @@ body{
     width: 20% !important;
 }
 .height-custom{
-    height: 550px;
+    height: 650px;
 }
 .padding-custom{
     padding-top: 70px;
@@ -188,7 +197,21 @@ body{
     font-size: 14px;
     font-weight: 700;
 }
-
+.btn-custom:hover{
+    transition: .5s ease;
+    background-color: #cf1d25;
+    border: 1px solid #cf1d25;
+    color: #fff;
+}
+.have-height{
+    height: 450px;
+}
+.bg-red{
+    background: linear-gradient(to right, #16BFFD 0%, #CB3066 100%);
+}
+.colorWhite{
+    color: white;
+}
 @media (max-width:550px){
     .max-width{
         max-width: 300px !important;
@@ -204,5 +227,9 @@ body{
     }
     .padding-custom{
         padding: 30px;
+    }
+    .p-l-r-0{
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }

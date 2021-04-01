@@ -5,13 +5,11 @@ import Footer from '../Components/Footer';
 
 const Home = () => {
     return (
-       <React.Fragment>
        <div className='container-fluid p-l-r-0'>
            <Header />
            <Body />
            <Footer />
         </div>
-       </React.Fragment>
     )
 }
 
