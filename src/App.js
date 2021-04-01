@@ -1,21 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 import React from 'react';
+import Home from './Pages/Home';
+import Product from './Pages/ProductDetail';
 
 const App = () =>{
  return(
    <React.Fragment>
-     {/* <Router>  
-        <Header />
+     <Router> 
         <Switch>
-      <Route exact path='/' component={Home} />
-      <Route  path='/product/:id' component={Product} />
-      <Route path='/Men' component={Men}></Route>
-      <Route exact path ='/:id' component={Product}></Route>
-
-      </Switch>
-      </Router> */}
-      <h1>Integrated React Router</h1>
+          <Route exact path='/' component={Home} />
+          <Route  path='/product/:id' component={Product} />
+       </Switch>
+      </Router>
    </React.Fragment>
  )
 }
